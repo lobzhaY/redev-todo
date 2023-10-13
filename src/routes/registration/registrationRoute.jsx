@@ -45,7 +45,7 @@ function RegistrationRoute() {
         `${URL}/users/register`,
         {
           username: values.username,
-          email: values.email,
+          email: values.useremail,
           password: values.password,
           gender: 'female',
           age: 25,
@@ -60,7 +60,11 @@ function RegistrationRoute() {
       })
       .catch((error) => {
         const { errors } = error.response.data;
-        errors.forEach((elem) => notify(elem.msg));
+        if (errors) {
+          errors.forEach((elem) => notify(elem.msg));
+        } else {
+          notify(error.response.data.message);
+        }
       });
   };
 
@@ -93,7 +97,7 @@ function RegistrationRoute() {
             </Form.Item>
             <Form.Item
               className={style.input_label}
-              name={['user', 'email']}
+              name="useremail"
               label="Email"
               rules={[{ required: true, message: 'Please input your email!', type: 'email' }]}
             >

@@ -1,0 +1,24 @@
+.header {
+  height: 100vh;
+  box-shadow: 7px 0px 10px -9px #000000;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  max-width: 60px;
+  height: 60px;
+  font-size: 45px;
+  color: #8e9b97;
+  margin-bottom: 20px;
+}
+
+.icon:hover {
+  color: #ebb582;
+}
+
+.icon:last-child {
+  margin-bottom: 0;
+}

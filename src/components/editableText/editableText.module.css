@@ -1,0 +1,12 @@
+.task_title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px !important;
+  margin-bottom: 0 !important;
+  color: #8e9b97 !important;
+}
+
+.input {
+  height: 35px;
+  color: #323030;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}

@@ -1,0 +1,29 @@
+.task {
+  height: 35px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}
+
+.task:last-child {
+  margin-bottom: 0;
+}
+
+.buttons {
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: 10px;
+  background-color: #cdbea7;
+}
+
+.buttons:last-child {
+  margin-right: 0;
+}
+
+.buttons:hover {
+  background-color: #ebb582 !important;
+}
+
+.isDone {
+  opacity: 0.5;
+  text-decoration: line-through;
+}

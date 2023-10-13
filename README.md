@@ -1,6 +1,6 @@
 # Todo list
 
-Link to deploy: https://super-semifreddo-2b8a77.netlify.app/
+Link to deploy: https://subtle-choux-e79a9d.netlify.app
 
 ----------------------------
 ![](https://github.com/lobzhaY/redev-todo/assets/89414357/4c7f68a5-6b2a-44f8-8411-fac5c6319e3e)

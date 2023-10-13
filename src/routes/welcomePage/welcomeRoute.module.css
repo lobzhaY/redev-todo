@@ -1,0 +1,38 @@
+.section {
+  height: 100vh;
+  padding: 30px;
+}
+
+.title {
+  font-family: 'Agdasima', sans-serif;
+}
+
+.right {
+  width: 80%;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.button {
+  height: auto;
+  font-family: 'Agdasima', sans-serif;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin-right: 20px;
+  border-color: #8e9b97;
+  color: #8e9b97;
+}
+
+.button:hover {
+  color: #ebb582 !important;
+  border-color: #ebb582 !important;
+}
+
+.button:last-child {
+  margin-bottom: 0;
+}

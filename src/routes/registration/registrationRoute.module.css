@@ -1,0 +1,46 @@
+.form_container {
+  margin-top: 75px;
+}
+
+.input_label {
+  margin-bottom: 35px;
+}
+
+label {
+  color: #323030 !important;
+  font-size: 20px !important;
+}
+
+.input {
+  height: 35px;
+  color: #323030;
+}
+
+.button {
+  height: 35px;
+  background-color: #eb8a3e;
+  padding: 0px 30px;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #d24136 !important;
+}
+
+.link_container {
+  margin-top: 5px;
+}
+
+.link_container p {
+  color: #323030;
+  font-size: 14px;
+}
+
+.link {
+  font-size: 15px;
+  color: #eb8a3e;
+}
+
+.link:hover {
+  color: #d24136;
+}

@@ -1,0 +1,58 @@
+.form_container {
+  margin-top: 35px;
+}
+
+.item_container {
+  margin-top: 25px;
+  min-height: 300px;
+}
+
+.footer_container {
+  margin-top: 25px;
+}
+
+.task_items {
+  width: 80%;
+}
+
+.title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: 30px !important;
+  margin-bottom: 0 !important;
+  color: #ebb582 !important;
+}
+
+.active_filter {
+  background-color: #eb8a3e;
+  font-family: 'Agdasima', sans-serif;
+}
+
+.active_filter:hover {
+  background-color: #d24136 !important;
+}
+
+.static_filter {
+  background-color: #cdbea7;
+  font-family: 'Agdasima', sans-serif;
+}
+
+.static_filter:hover {
+  background-color: #ebb582 !important;
+}
+
+.filter_container {
+  margin: 20px 0;
+}
+
+.filter_message {
+  font-family: 'Agdasima', sans-serif;
+  font-size: 40px !important;
+  margin-bottom: 0 !important;
+  color: #323030 !important;
+  text-align: center;
+}
+
+.filter_message span {
+  text-transform: uppercase;
+  color: #d24136;
+}

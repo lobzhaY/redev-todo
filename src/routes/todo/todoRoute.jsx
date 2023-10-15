@@ -27,7 +27,7 @@ function TodoRoute() {
   const notify = (message) =>
     toast.error(`${message}`, {
       position: 'top-right',
-      autoClose: 5000,
+      autoClose: 7000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

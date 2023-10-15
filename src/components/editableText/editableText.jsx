@@ -8,7 +8,7 @@ import { ThreeDots } from 'react-loader-spinner';
 
 import style from './editableText.module.css';
 
-function EditableText({ title, isEdit, setIsEdit, onChange, isLoading }) {
+function EditableText({ title, isEdit, setIsEdit, onChange, isLoading, isCompleted }) {
   const { Text } = Typography;
 
   const [inputValue, setInputValue] = useState(!isEdit ? title : '');
@@ -44,7 +44,10 @@ function EditableText({ title, isEdit, setIsEdit, onChange, isLoading }) {
       autoFocus
     />
   ) : (
-    <Text onDoubleClick={changeActiveMode} className={style.task_title}>
+    <Text
+      onDoubleClick={changeActiveMode}
+      className={isCompleted ? `${style.task_title} ${style.isDone}` : style.task_title}
+    >
       {isLoading ? (
         <ThreeDots
           height="35"
@@ -71,4 +74,5 @@ EditableText.propTypes = {
   setIsEdit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+  isCompleted: PropTypes.bool.isRequired,
 };

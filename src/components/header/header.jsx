@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, NavLink } from 'react-router-dom';
 
 import {
   LoginOutlined,
@@ -29,13 +29,13 @@ function Header() {
 
   return (
     <header className={style.header}>
-      <Link to="/">
+      <NavLink to="/" className={({ isActive }) => (isActive ? `${style.active}` : '')}>
         <AppstoreOutlined className={style.icon} />
-      </Link>
+      </NavLink>
       {auth && (
-        <Link to="/todo">
+        <NavLink to="/todo" className={({ isActive }) => (isActive ? `${style.active}` : '')}>
           <UserOutlined className={style.icon} />
-        </Link>
+        </NavLink>
       )}
       {!auth ? (
         <Link to="/auth">

@@ -30,7 +30,7 @@ function AuthorizationRoute() {
   const notify = (message) =>
     toast.error(`${message}`, {
       position: 'top-right',
-      autoClose: 5000,
+      autoClose: 7000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -53,16 +53,13 @@ function AuthorizationRoute() {
         setItem(response.data.token);
         setAuth(response.data.token);
         form.resetFields();
-        navigate('/');
+        navigate('/todo');
       })
       .catch((error) => {
-        notify(error.response.data.message);
+        notify(error.response.data.message || error.message);
       });
   };
 
-  const onFinishFailed = (errorInfo) => {
-    errorInfo.errorFields.forEach((elem) => notify(elem.errors[0]));
-  };
   return (
     <div className="wrapper">
       <ToastContainer />
@@ -76,7 +73,6 @@ function AuthorizationRoute() {
             style={{ maxWidth: 600 }}
             initialValues={{}}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
             autoComplete="off"
             form={form}
           >

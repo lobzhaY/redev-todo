@@ -93,13 +93,14 @@ function Task({ taskItem, notify }) {
               <Checkbox onChange={changeStatus} checked={isCompleted} />
             )}
           </Col>
-          <Col span={17}>
+          <Col span={17} className={style.mb}>
             <EditableText
               title={title}
               onChange={getNewValue}
               isEdit={edit}
               isLoading={isLoadingUpdateTask}
               setIsEdit={setEdit}
+              isCompleted={isCompleted}
             />
           </Col>
           <Col span={5}>

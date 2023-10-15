@@ -9,6 +9,7 @@ import AuthorizationRoute from './routes/authorization/authorizationRoute';
 import TodoRoute from './routes/todo/todoRoute';
 import RootRoute from './routes/rootRoute/rootRoute';
 import PrivateRoute from './routes/privateRoute/privateRoute';
+import LimitPrivateAccess from './routes/limitPrivateAccess/limitPrivateAccess';
 
 import AuthContext from './context/authContext';
 
@@ -26,8 +27,22 @@ function App() {
           <Route path="/" element={<RootRoute />}>
             <Route index element={<WelcomePage />} />
             <Route path="/404" element={<NotFoundRoute />} />
-            <Route path="/reg" element={<RegistrationRoute />} />
-            <Route path="/auth" element={<AuthorizationRoute />} />
+            <Route
+              path="/reg"
+              element={
+                <LimitPrivateAccess>
+                  <RegistrationRoute />
+                </LimitPrivateAccess>
+              }
+            />
+            <Route
+              path="/auth"
+              element={
+                <LimitPrivateAccess>
+                  <AuthorizationRoute />
+                </LimitPrivateAccess>
+              }
+            />
             <Route
               path="/todo"
               element={

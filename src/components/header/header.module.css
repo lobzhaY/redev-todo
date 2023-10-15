@@ -22,3 +22,9 @@
 .icon:last-child {
   margin-bottom: 0;
 }
+
+.active {
+  .icon {
+    color: #d24136;
+  }
+}

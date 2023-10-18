@@ -49,15 +49,9 @@ function TodoRoute() {
     }
   };
 
-  const changeFilter = (value) => {
+  const changeFilter = (value, word) => {
     setFilter(value);
-    if (value === undefined) {
-      setFilterWord('All');
-    } else if (value === true) {
-      setFilterWord('Completed');
-    } else if (value === false) {
-      setFilterWord('Active');
-    }
+    setFilterWord(word);
   };
 
   return (
@@ -111,22 +105,22 @@ function TodoRoute() {
       <Row justify="center" align="middle" className={style.filter_container}>
         <Button
           type="primary"
-          className={filter === undefined ? style.active_filter : style.static_filter}
-          onClick={() => changeFilter(undefined)}
+          className={filterWord === 'All' ? style.active_filter : style.static_filter}
+          onClick={() => changeFilter(undefined, 'All')}
         >
           All
         </Button>
         <Button
           type="primary"
-          className={filter === false ? style.active_filter : style.static_filter}
-          onClick={() => changeFilter(false)}
+          className={filterWord === 'Active' ? style.active_filter : style.static_filter}
+          onClick={() => changeFilter(false, 'Active')}
         >
           Active
         </Button>
         <Button
           type="primary"
-          className={filter === true ? style.active_filter : style.static_filter}
-          onClick={() => changeFilter(true)}
+          className={filterWord === 'Completed' ? style.active_filter : style.static_filter}
+          onClick={() => changeFilter(true, 'Completed')}
         >
           Completed
         </Button>
